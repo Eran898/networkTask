@@ -1,0 +1,3 @@
+with open('/home/eran/Desktop/file.txt') as f:
+    s = f.read()
+send(IP(dst = '10.0.0.146') / ICMP() / Raw(load = s)) # you can, also, omit Raw(load = s) and just add it as ... / string_variable
